@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>La Tienda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!--GOOGLE-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><!--GOOGLE-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&family=Open+Sans:wght@300;600&family=Roboto:wght@300&display=swap"
+        rel="stylesheet"><!--GOOGLE-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--CSS Bootstrap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!--Animate-->
+    <link rel="stylesheet" href="miCss.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-expand-md "><!--Que se expanda el menu cuando sea mediano y grande . navbar-expand-lg es que se expanda el menu a pantalla completa en distpositivos grandes -->
+        <div class="containerNav container-fluid"><!--Que ocupe el ancho completo de la ventana del ordenador-->
+            <div class="d-flex flex-grow-1"><!--d-flex es de bootstrap y es para que tenga un diseño más flexible y flex-grow-1 es para que se expanda lo máximo dentro del contenedor flexible-->
+                <span class="w-100 d-lg-none d-block"><!--w-100 significa que tenga el 100% del ancho de su elemento--><!--d-lg-none significa que el elemento no se vera en resoluciones grandes--><!--d-block significa que el elemento será visible en todas las resoluciones-->
+                </span>
+                <a class="navbar-brand d-none d-lg-inline-block" href="index.html"><!--navbar-brand es un estilo de bootstrap de una barra de navegacion    d-none: que estara oculto en todas las pantallas   d-lg-inline-block:se mostrara como un bloque en linea en pantallas grande, ocupara el ancho sin romper la linea-->
+                    <img class="logo" src="Logo/logoTienda.png" alt="logo">
+                </a>
+                <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="index.html"><!--navbar-brand-two es un estilo de bootstrap,   mx-auto:centra el elemento en cualquier resolucion,    d-lg-none:que estara oculto en pantallas grandes,  d-inline-block:que se mostrara como un bloque de linea en todas las resoluciones-->
+                    <img class="logo" src="Logo/logoTienda.png" alt="logo">
+                </a>
+                <div class="w-100 text-right"><!--w-100:Que ocupe el 100% del ancho,   text-right:que el texto sea alineado a la derecha-->
+
+                    <button class="navbar-toggler" id="nav-icon1" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#myNavbar"><!--Esto es lo del icono de hamburguesa-->
+                        <span class="navbar-toggler-icon"></span>
+                        <span></span><!--navbar-toggler:estilo de los botones del navbar(que alternan),  type="button":se define el boton como boton para confirmar que no se realice un envio de formulario, data-bs-toggle="collapse":se puede alternar la visibilidad de un elemento, que se puede colapsar en dispositivos pequeños-->
+                        <span></span><!--los span en esste caso son las líneas del navbar-->
+                    </button>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar"><!--collapse: que el contenido ya esta colapsado,  navbar-collapse:el contenido es parte de la sección colapsable de la barra de navegación, flex-grow-1: que el container puedo ocupar todo el ancho-->
+                <ul class="navbar-nav ms-auto flex-nowrap"><!--navbar-nav:que pertenece al navbar, ms-auto: margin start auto, un margen izquierdo automatico, flex-nowrap:los elementos no se pueden poner en varias lineas, sino todo horizontalmente en una sola linea-->
+                    <li class="nav-item"><!--nav-item:que es un elemento del navbar-->
+                        <div class="contenedorMenuOpciones">
+
+                            <a href="index.html">
+                                <img class="imagenMenu " src="Imagenes/iconosMenu/hogar.png" alt="Inicio">
+                            </a>
+                            <a href="index.html" class="resaltar active nav-link menu-item  ">Inicio</a>
+                            <!--active sirve para cuando estas en ese link-->
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="contenedorMenuOpciones">
+                            <a href="conocenos.html">
+                                <img class="imagenMenu" src="Imagenes/iconosMenu/conocenos.png" alt="Conócenos">
+                            </a>
+                            <a href="conocenos.html" class="resaltar nav-link menu-item">Conócenos</a>
+                            <!--active sirve para cuando estas en ese link-->
+                        </div>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <div class="contenedorMenuOpciones">
+                            <a href="compra.html">
+                                <img class="imagenMenu" src="Imagenes/iconosMenu/compra.png" alt="Compra en Línea">
+                            </a>
+                            <a href="compra.html" class="resaltar nav-link menu-item">Productos</a>
+                            <!--active sirve para cuando estas en ese link-->
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <div class="contenedorMenuOpciones">
+                            <a href="contacto.html">
+                                <img class="imagenMenu" src="Imagenes/iconosMenu/contacto.png" alt="Contacto">
+                            </a>
+                            <a href="contacto.html" class="resaltar nav-link menu-item">Contacto</a>
+                            <!--active sirve para cuando estas en ese link-->
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!--inicio carrusel-->
+        <div class="carrusel-contenedor">
+            <button class="carrusel-boton previo" onclick="prevSlide()">❮</button><!--pertenece a la clase cassusel-boton y previo--><!--onclick="prevSlide(): cuando exista un click  que llame a la función prevSlide-->
+            <div class="carrusel">
+                <div class="carrusel-item">
+                    <img src="Imagenes/imagenesCarrusel/Bocatas.jpeg" alt="Imagen 1">
+                    <div class="carrusel-texto">
+                        <h2>Bocatas</h2>
+                    </div>
+                </div>
+                <div class="carrusel-item">
+                    <img src="Imagenes/imagenesCarrusel/paella.webp" alt="Imagen 2">
+                    <div class="carrusel-texto">
+                        <h2>Paella</h2>
+                    </div>
+                </div>
+                <div class="carrusel-item">
+                    <img src="Imagenes/imagenesCarrusel/panaderia.jpg" alt="Imagen 3">
+                    <div class="carrusel-texto">
+                        <h2>Bolleria</h2>
+                    </div>
+                </div>
+                <div class="carrusel-item">
+                    <img src="Imagenes/imagenesCarrusel/cafe.jpg" alt="Imagen 4">
+                    <div class="carrusel-texto">
+                        <h2>Cafe</h2>
+                    </div>
+                </div>
+                <div class="carrusel-item">
+                    <img src="Imagenes/imagenesCarrusel/espaguetisCarbonara.jpg" alt="Imagen 5">
+                    <div class="carrusel-texto">
+                        <h2>Spaghetti Carbonara</h2>
+                    </div>
+                </div>
+                <div class="carrusel-item">
+                    <img src="Imagenes/imagenesCarrusel/Fideua.jpg" alt="Imagen 6">
+                    <div class="carrusel-texto">
+                        <h2>Fideua</h2>
+                    </div>
+                </div>
+                <div class="carrusel-item">
+                    <img src="Imagenes/imagenesCarrusel/tortilladePatatas.jpg" alt="Imagen 7">
+                    <div class="carrusel-texto">
+                        <h2>Tortilla de Patatas</h2>
+                    </div>
+                </div>
+                <div class="carrusel-item">
+                    <img src="Imagenes/imagenesCarrusel/polloEmpanizado.jpg" alt="Imagen 8">
+                    <div class="carrusel-texto">
+                        <h2>Pollo Empanado</h2>
+                    </div>
+                </div>
+                <!-- Añade más slides según sea necesario -->
+            </div>
+            <button class="carrusel-boton siguiente" onclick="nextSlide()">❯</button><!--Si hay click que llame a la función nextSlide-->
+        </div>
+        <!--fin carrusel-->
+
+        <section class="imagen-titulo">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 order-sm-2"><!--Para pantallas medianas ocupa 6 columnas,order-sm-2:el elemepento aparece en segundo lugar/-->
+                        <h2>Pedidos Especiales </h2>
+                        <p>Paletilla de Cordero</p>
+                    </div>
+                    <div class="col-md-6 col-sm-12 order-sm-1"><!--order-sm-1:el elemepento aparece en primer lugar-->
+                        <img src="Imagenes/ImagenesInicio/paletillaCordero.jpg" alt="Image Title"
+                            class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 order-sm-2">
+                        <h2>Un ambiente Familiar</h2>
+                        <p>Preparado con amor</p>
+                    </div>
+                    <div class="col-md-6 col-sm-12 order-sm-1">
+                        <img src="Imagenes/ImagenesInicio/familia.jpg" alt="Image Title" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 order-sm-2">
+                        <h2>Comida Casera</h2>
+                        <p>Comida preparada como en Casa</p>
+                    </div>
+                    <div class="col-md-6 col-sm-12 order-sm-1">
+                        <img src="Imagenes/ImagenesInicio/chef.webp"
+                            alt="Image Title" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 order-sm-2">
+                        <h2>Del Horno a tu mesa</h2>
+                        <p>Nuestros productos se preparan diario</p>
+                    </div>
+                    <div class="col-md-6 col-sm-12 order-sm-1">
+                        <img src="Imagenes/ImagenesInicio/panHorno.jpg" alt="Image Title" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <div class="texto-final">
+                <p>Ven y Conócenos, Piqueras 3, Las Rozas de Madrid, hasta pronto.</p>
+            </div>
+        </section>
+
+    </main>
+    <!--Inicio Footer-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Contacto</h3>
+                    <p>Email: latienda@gmail.com</p>
+                    <p>Teléfono: 604 28 06 63</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html" class="active">Inicio</a></li><!--active es para que aparezca destacado cuando estes en esa página-->
+                        <li><a href="conocenos.html">Conócenos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="compra.html">Compra en Línea</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Síguenos</h3>
+                    <p>Síguenos en nuestras redes sociales para recibir las últimas actualizaciones:</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/" target="_blank"><img
+                                src="Imagenes/IconocFooter/facebook.png" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/" target="_blank"><img
+                                src="Imagenes/IconocFooter/instagram.png" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Fin Footer-->
+    <!--Inicio cookies-->
+    <div class="aviso-cookies" id="aviso-cookies">
+        <img class="galleta" src="Imagenes/Cookies/cookie.svg" alt="Galleta">
+        <h3 class="titulo">Cookies</h3>
+        <p class="parrafo">Utilizamos cookies para mejorar nuestros servicios.</p>
+        <button class="boton" id="btn-aceptar-cookies">De acuerdo</button>
+    </div>
+    <div class="fondo-aviso-cookies" id="fondo-aviso-cookies"></div>
+    <!--Fin cookies-->
+    <!--Para que funcione el boton del nav animado-->
+    <script src="cookies.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="documentosjs.js"></script><!--Mi script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

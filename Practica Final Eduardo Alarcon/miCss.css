@@ -1,0 +1,1036 @@
+/*Inicio index*/
+/* Estilos para el texto al final de la página */
+.texto-final {
+    background-color: #189170;
+    padding: 20px;
+    text-align: center;
+    /* Alineación del texto al centro */
+}
+
+
+.imagen-titulo {
+    background-color: #0d6654;
+    padding: 50px 0;
+}
+
+.imagen-titulo img {
+    max-width: 100%;
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    border-radius: 8px;
+    /*  Agrega esquinas redondeadas a la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Agrega una sombra  */
+}
+
+.imagen-titulo h2 {
+    color: #000000;
+    margin-top: 20px;
+}
+
+.imagen-titulo p {
+    color: #000000;
+    font-size: 20px;
+}
+
+/*Final index*/
+/*Inicio Footer*/
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+}
+
+.footer h3 {
+    color: #fff;
+}
+
+.footer p {
+    color: #ccc;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+footer a {
+    color: #469cf9;
+    text-decoration: none;
+    /* Elimina el subrayado del a */
+    transition: color 0.3s ease-in-out;
+    /* Transición para el cambio de color */
+}
+
+footer a:hover {
+    color: #bacbd2;
+    /* Cambia el color al pasar el ratón  */
+}
+
+/*Fin Footer*/
+
+/*Empieza carrusel*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: grid;/*El container es en cuadricula con filas y columnas*/
+    grid-template-rows: auto 1fr;/*se especifica la altura de las filas*/
+    /* La primera fila tendrá el tamaño de su contenido (el navbar), la segunda fila ocupará el resto del espacio */
+    height: 100vh;
+    margin: 0;
+    height: 3000px;
+    background-color: #0d6654;
+}
+
+.carrusel-contenedor {
+
+    max-width: 100%;
+    position: relative;
+    margin-top: 120px;
+    z-index: 1;/*posicion en la que se sobreponen los elementos*/
+    overflow: hidden;/*Cualquier cosa que se salga de los limites del contenedor se debe recortar y ocultar*/
+    position: relative;/*Afecta el posicionamiento de sus descendientes pero no del propio elemento,puedes poner top,right,bottom y left. Sus elementos descendientes se mueven respecto a su posicion oiginal*/
+}
+
+.carrusel {
+    display: flex;/*Contenedor flexible*/
+    transition: transform 0.5s ease-in-out;/*el transform dura .5 segundos*/
+}
+
+.carrusel-item {
+    min-width: 100%;
+    position: relative;/*Afecta el posicionamiento de sus descendientes pero no del propio elemento,puedes poner top,right,bottom y left. Sus elementos descendientes se mueven respecto a su posicion oiginal*/
+}
+
+.carrusel-item img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;/*La imagen se adapta al contenedor, la imagen puede ser recortada para adptarse*/
+}
+
+.carrusel img {
+    width: 100%;
+    object-fit: cover;/*La imagen se adapta al contenedor, la imagen puede ser recortada para adptarse*/
+    filter: opacity(100%) brightness(50%);
+    /* capa negra transparente a las imágenes */
+    opacity: 0.9;
+
+}
+
+.carrusel-texto {
+    position: absolute;/*Ignora los otros elementos mas que este contenido en un relative y se ubica respecto al ultimo estatico*/
+    top: 50%;/*Arriba un 50% alejado*/
+    left: 50%;/*distanciaa del 50% desde la izquierda*/
+    transform: translate(-50%, -50%);/*Ajusta el elemento para que este perfectamente centrado en las coordenadas x y y*/
+    text-align: center;
+    z-index: 1;/*posicion en la que se sobreponen los elementos*/
+}
+
+.carrusel-texto h2 {
+    color: #ffffff;
+}
+
+
+.carrusel-boton {
+    position: absolute;/*respecto a su ultimo elemento estatico*/
+    top: 50%;/*50% de su padre*/
+    transform: translateY(-50%);/*Baja 50% en sus coordenadas Y*/
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    line-height: 40px;/*Altura de la linea*/
+    cursor: pointer;/*Cuando el cursor este encima cambiara a una mano*/
+    font-size: 24px;
+    border: none;/*Sin borde*/
+    outline: none;/*Sin contorno*/
+    opacity: 0.8;
+    z-index: 2;/*posicion en la que se sobreponen los elementos*/
+}
+
+.previo {
+    left: 0;/*Que este pegado a la izquierda*/
+}
+
+.siguiente {
+    right: 0;/*Que este pegado a la derecha*/
+}
+
+/*Termina Carrusel */
+a {
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    padding: 5px;
+    transition: opacity .3s linear, color .5s ease-out, transform .9s;
+
+}
+
+.scrollSky {
+    background-color: rgb(84, 167, 192);
+    border: 2px solid #000000;
+    /*Borde Solido*/
+    border-radius: 10px;
+    /* Agrega esquinas redondeadas */
+    animation: backInRight;
+    /*Nombre de la animación de animate*/
+    animation-duration: .2s;
+}
+
+/*Inicio Código NAVBAR*/
+.navbar {
+    background-color: #153756;
+    overflow: hidden;/*Si sobresale se esconde o corta el elemento*/
+    position: absolute;/*El elemento se mantiene fijo aun con el scroll*/
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    font-family: 'Roboto';
+
+}
+
+@media (min-width: 768px) {
+    .navbar-brand.abs {
+        position: absolute;
+        width: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+
+    }
+}
+
+/*Fin Código NAVBAR*/
+
+
+.resaltar {
+    background-color: none;
+    color: #000000;
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    padding: 5px;
+    transition: opacity .3s linear, color .5s ease-out, transform .9s;
+    /*transition: color .3s/*En .3 segundos se cambia de color cuando hay hover*/
+
+}
+
+.resaltar:hover
+
+/*Cuando tiene el mouse encima*/
+    {
+    color: #ffffff;
+    background-color: transparent;
+
+}
+
+a.active
+/*Cuando esta en esa página*/
+    {
+        font-weight: bold;
+}
+
+.contenedorMenuOpciones {
+    display: flex;
+    /*Para que sus elementos se puedan alinear*/
+    flex-direction: row;
+    /*Alinear en una fila*/
+    align-items: center;
+    /*Alinea al centro los elementos*/
+}
+
+.navbar a.nav-link:hover {
+    animation: pulse;
+    /*Nombre de la animación de animate*/
+    animation-duration: 2s;
+}
+
+.imagenMenu {
+    height: 25px;
+}
+
+
+
+.containerNav {
+    background-color: rgb(30, 114, 156);
+}
+
+/*Inicio Animación Boton Nav*/
+#nav-icon1 {
+    width: 60px;
+    height: 50px;
+    position: relative;
+    margin: 19px auto;
+    /* Rotación del icono */
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    /* Transición suave de la rotación */
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    /*Mouse cambia a fomra de mano cuando esta encima */
+    cursor: pointer;
+}
+
+#nav-icon1 span {
+    display: block;/*Ocupa todo el ancho del contenedor extendiendose desde el borde izquierdo al derecho*/
+    position: absolute;
+    height: 7px;
+    width: 100%;
+    background: #020202;
+    border-radius: 9px;/*Redondear las esquinas*/
+    opacity: 1;
+    left: 0;
+    /* Rotación  */
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    /* Transición suave de la rotación */
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+#nav-icon1 span:nth-child(1) {
+    top: 0px;
+}
+
+#nav-icon1 span:nth-child(2) {
+    top: 18px;
+}
+
+#nav-icon1 span:nth-child(3) {
+    top: 36px;
+}
+
+#nav-icon1.open span:nth-child(1) {
+    top: 18px;
+    /*Rotacion de los hijos del span*/
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+#nav-icon1.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+#nav-icon1.open span:nth-child(3) {
+    top: 18px;
+    /*Rotacion de los hijos del span*/
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+/*Fin Animación Boton Nav*/
+.logo
+
+/*Icono*/
+    {
+    height: 100px;
+    padding-left: 0;
+}
+
+/*Inicio Galeria*/
+.bodyComprar {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d6654;
+
+}
+
+.containerGaleria {
+    max-width: 1200px;
+    margin: 20px auto;
+    margin-top: 120px;
+    display: flex;/* contenedor flexible*/
+    flex-wrap: wrap;/*si los elementos no caben en una sola línea, se envolverán a la siguiente línea*/
+    justify-content: space-around;/*distribuye el espacio sobrante alrededor de los elementos secundarios de manera uniforme, creando margenes entre los elementos*/
+}
+
+.producto {
+    width: calc(33.33% - 40px);
+    margin: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;/*Redondeo*/
+    overflow: hidden;/*Si se sobrepasa que se recorte*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);/*Caracteristicas de las sombras*/
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;/*Que cambie a mano el mouse cuando este encima*/
+}
+
+.producto:hover {
+    transform: scale(1.05);/*Aumenta el tamaño en un 5%*/
+}
+
+.producto img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;/*ajustar el contenido del elemento de sustitución al tamaño del contenedor*/
+    border-bottom: 1px solid #ddd;/*Borde de abajo*/
+}
+
+.producto-info {
+    padding: 10px;
+}
+
+.producto-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.producto-price {
+    color: #e44d26;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.modal {
+    display: none;/*no se ve*/
+    position: fixed;/*Se ve aunque baje*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.modal-contenido {
+    width: 80%;
+    height: 80%;
+    max-width: 800px;
+    max-height: 600px;
+    margin: auto;
+    overflow: hidden;/*Si se pasa que se oculte o se recorte*/
+    background-color: #fff;
+    border-radius: 8px;/*Redondeo*/
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);/**Caracteristicas sombras*/
+}
+
+.modal img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;/*ajustar el contenido del elemento para que se ajuste completamente al contenedor manteniendo su relación de aspecto*/
+    cursor: zoom-out;/*Cambia a lupa el cursor*/
+    /*cover busca cubrir completamente el contenedor, mientras que contain busca ajustarse completamente dentro del contenedor*/
+}
+
+.cerrar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;/*Cambia el cursos a mano*/
+    color: #fff;
+    font-size: 24px;
+}
+
+/*Fin Galeria*/
+/*Inicio Contacto*/
+.bodyContacto {
+    font-family: 'Arial', sans-serif;
+    margin-top: 30px;
+    padding: 0;
+    background-color: #0d6654;
+
+}
+
+/*Inicio Mapas*/
+.contenedorMapa1,
+.contenedorMapa2 {
+    margin: 20px;
+    margin-top: 0px;
+    padding: 10px;
+    ;
+    margin-bottom: 35px;
+    background-color: #699586;
+
+}
+
+.TituloMapas {
+    text-align: center;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+
+}
+
+.TituloMapas h1 {
+    font-size: 38px;
+}
+
+.contenedorMapa2 {
+    margin-top: 30px;
+}
+
+#mapaContainer {
+    display: flex;/*Establece el contenedor como un contenedor flexible*/
+    flex-direction: column;/*column indica que los elementos secundarios se organizarán en una columna vertical, de arriba a abajo*/
+    margin: 0px;
+}
+
+.mapa {
+    width: 100%;
+    height: 400px;
+    border: 1px solid #ddd;
+    border-radius: 8px;/*Redondeo*/
+    margin-bottom: 20px;
+}
+
+.mapa-info {
+    text-align: left;
+    color: #030303;
+}
+
+/*Fin Mapas*/
+/*Inicio Autor*/
+
+
+#contactoAutor {
+    margin: 20px;
+    margin-top: 150px;
+    padding: 20px;
+    background-color: #699586;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);/*Caracteristicas sombras*/
+    display: flex;/*Contenedor flexible*/
+}
+
+#autorFoto {
+    max-width: 20%;
+    padding-top: 20px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 50%;/*Redondeo*/
+}
+
+#detallesContacto {
+    font-size: 18px;
+    line-height: 1.6;/*Altura de la linea*/
+}
+
+
+
+/*Fin Autor*/
+/*Inicio Formulario*/
+.tituloFormulario {
+    margin-top: 70px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;/*Negritas*/
+    margin-bottom: 20px;
+    color: #ffffff;
+    padding: 20px;
+
+}
+
+.formulario-contenedor {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #699586;
+    padding: 10px;
+}
+
+.campo-formulario {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;/*Ocupa todo el ancho disponible y comienza en una nueva línea, lo que significa que los elementos siguientes aparecerán en una línea nueva*/
+    margin-bottom: 5px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;/*como es el borde*/
+}
+
+textarea {
+    resize: vertical;/* solo puede ser redimensionado verticalmente por el usuario*/
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;/*Sin borde*/
+    border-radius: 5px;/*Redondeo*/
+    cursor: pointer;/*Mano en mouse*/
+}
+
+.error {
+    border-color: red;/*Color del borde*/
+}
+
+.mensaje-error {/*Caracteristicas del mensaje de error*/
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/*Fin Formulario*/
+
+/*Fin Contacto*/
+/*Inicio Cookies*/
+
+.aviso-cookies {
+    display: none;/*Para ocultarlo*/
+    background: #fff;
+    padding: 20px;
+    width: calc(100% - 40px);
+    max-width: 300px;
+    line-height: 150%;
+    border-radius: 10px;/*Redondeo*/
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1005;
+    padding-top: 60px;
+    box-shadow: 0px 2px 20px 10px rgba(222, 222, 222, .25);/*h-offset:Desplazamiento horizontal de la sombra, v-offset:Desplazamiento vertical de la sombra, blur: Difuminado de la sombra,  spread: Extensión de la sombra,  color: Color de la sombra*/
+    text-align: center;
+}
+
+.aviso-cookies.activo {/*no se ocultan y ocupa todo el ancho*/
+    display: block;
+}
+
+.aviso-cookies .galleta {
+    max-width: 100px;
+    position: absolute;/*Se posiciona segun el ultimo elemento estatico*/
+    top: -50px;
+    left: calc(50% - 50px);/*Es para calcular la distancia horizontalmente en relacion al padre, agarra el 50% del padre y le resta 40px*/
+}
+
+.aviso-cookies .titulo,
+.aviso-cookies .parrafo {
+    margin-bottom: 15px;
+}
+
+.aviso-cookies .boton {
+    width: 100%;
+    background: #595959;
+    border: none;/*Sin borde*/
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: 15px 20px;
+    font-weight: 700;/*Grosor de letra*/
+    cursor: pointer;/*Que cambie a mano el mouse*/
+    transition: .3s ease all;
+    border-radius: 5px;/*Redondeo*/
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.aviso-cookies .boton:hover {
+    background: #000;
+}
+
+.aviso-cookies .enlace {
+    color: #4DBFFF;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.titulo,
+.parrafo {
+    font-family: 'Roboto', sans-serif;
+}
+
+.aviso-cookies .enlace:hover {
+    text-decoration: underline;/*Que este subrayado*/
+}
+
+.fondo-aviso-cookies {
+    display: none;/*Que no se muestre*/
+    background: rgba(0, 0, 0, .20);
+    position: fixed;
+    z-index: 1002;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.fondo-aviso-cookies.activo {
+    display: block;/*Para que se muestre*/
+}
+
+.lb-close {
+    position: absolute;/*Posicion sobre el ultimo elemento estatico*/
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;/*Que cambie a mano el cursor*/
+    z-index: 1060;/*Cual elemento se encuentra hasta arriba*/
+}
+
+/*Fin Cookies*/
+/*Inicio Conocenos*/
+
+.bodyConocenos {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d6654;
+}
+
+#contenedorConocenos {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.row {
+    display: flex;/*contenedor flexible y permitir que los elementos dentro de él se envuelvan en filas o columnas */
+    flex-wrap: wrap;/*los elementos deben envolverse en filas o columnas adicionales según sea necesario para ocupar el espacio disponible*/
+    margin-bottom: 120px;
+}
+
+.col-md-6 {
+    flex: 0 0 calc(50% - 40px);/*: La propiedad flex se utiliza para establecer las propiedades flexibles de un elemento dentro de un contenedor flexible
+    flex-grow: 0: El elemento no crecerá para ocupar espacio adicional.
+    flex-shrink: 0: El elemento no se reducirá para ocupar menos espacio.
+    flex-basis: calc(50% - 40px): El tamaño inicial del elemento será del 50% del contenedor menos 40 píxeles.
+    */
+    margin-right: 20px;
+}
+
+.col-md-6:last-child {/*Al ultimo hijo que tenga esa clase*/
+    margin-right: 0;
+}
+
+h2 {
+    color: #000000;
+    font-size: 30px;
+
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;/*Redondeo*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);/*Para añadir sombras a un elemento*/
+}
+
+iframe {
+    width: 100%;
+    height: 200px;
+    border: none;/*Sin borde*/
+    border-radius: 8px;/*Redondeo*/
+}
+
+#contenedorConocenos {
+    margin-top: 150px;
+}
+
+/*Video*/
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /*  16:9 para hacerlo responsive */
+    overflow: hidden;/*si se pasa que se esconda*/
+}
+
+.video-container iframe {
+    position: absolute;/*Se posiciona segun el ultimo elemento estatico*/
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.containerVideoTodo {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Fin Conocenos*/
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .imagenMenu {
+        padding-right: 2px;
+    }
+
+    .carrusel img {
+        height: 250px;
+    }
+
+
+    .carrusel-texto h2 {
+        font-size: 30px;
+    }
+
+    .footer h3,
+    .footer p,
+    .social-icons {
+        margin-bottom: 15px;
+    }
+
+    .producto {
+        width: calc(100% - 40px);
+    }
+
+    #autorFoto {
+        margin-top: 100px;
+        padding-top: 20px;
+        height: 100%;
+        max-width: 100%;
+        width:100%;
+    }
+
+    #detallesContacto {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .formulario-contenedor {
+        margin: 20px;
+    }
+
+    .col-sm-12 {
+        /* colapsar todas las columnas a ancho completo 
+        flex-grow: 0: El elemento no crecerá para ocupar espacio adicional.
+        flex-shrink: 0: El elemento no se reducirá para ocupar menos espacio.
+        flex-basis: 100%: El tamaño inicial del elemento será del 100% del contenedor*/
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .navbar {
+        background-color: #153756;
+        overflow: hidden;/*Si sobresale se esconde o corta el elemento*/
+        position: fixed;/*El elemento se mantiene fijo aun con el scroll*/
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    
+        font-family: 'Roboto';
+    
+    }
+    #autorFoto {
+        margin: 0px;
+        padding-top: 0px;
+        height: 100%;
+        max-width: 100%;
+        width:100%;
+    }
+    #contactoAutor {
+        margin: 0px;
+        padding: 0px;
+        background-color: #699586;
+    }
+    #detallesContacto {
+        font-size: 18px;
+        line-height: 1.6;
+        display:none;
+    }
+
+}
+
+
+/* Small devices (landscape phones, entre 576px y 767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .imagenMenu {
+        padding-right: 2px;
+    }
+
+    .carrusel img {
+        height: 400px;
+    }
+
+    .Seccion1 {
+        height: 400px;
+    }
+
+    .carrusel-texto h2 {
+        font-size: 35px;
+    }
+
+    .footer h3,
+    .footer p,
+    .social-icons {
+        margin-bottom: 15px;
+    }
+
+    .producto {
+        width: calc(100% - 40px);
+    }
+
+    #autorFoto {
+
+        padding-top: 20px;
+        height: 140px;
+        max-width: 30%;
+    }
+
+    #detallesContacto {
+        font-size: 18px;
+        line-height: 1.6;
+        display:none;
+    }
+
+    .col-sm-12 {
+        /* colapsar todas las columnas a ancho completo
+        flex-grow: 0: El elemento no crecerá para ocupar espacio adicional.
+        flex-shrink: 0: El elemento no se reducirá para ocupar menos espacio.
+        flex-basis: 100%: El tamaño inicial del elemento será del 100% del contenedor.  */
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .navbar {
+        background-color: #153756;
+        overflow: hidden;/*Si sobresale se esconde o corta el elemento*/
+        position: fixed;/*El elemento se mantiene fijo aun con el scroll*/
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    
+        font-family: 'Roboto';
+    
+    }
+    #autorFoto {
+        margin: 0px;
+        padding-top: 0px;
+        height: 100%;
+        max-width: 100%;
+        width:100%;
+    }
+    #contactoAutor {
+        margin: 0px;
+        padding: 0px;
+        background-color: #699586;
+    }
+    
+}
+
+
+    /* Medium devices (tablets, entre 768px y 991.98px) */
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .imagenMenu {
+            padding-right: 2px;
+        }
+
+        .carrusel img {
+            height: 480px;
+        }
+
+        .Seccion1 {
+            height: 480px;
+        }
+
+        .carrusel-texto h2 {
+            font-size: 50px;
+        }
+
+        #autorFoto {
+
+            padding-top: 0px;
+            height: 120px;
+            max-width: 30%;
+        }
+
+        #detallesContacto {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+    }
+
+
+    /* Large devices (desktops, entre 992px y 1199.98) */
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .carrusel img {
+            height: 600px;
+        }
+
+        .Seccion1 {
+            height: 600px;
+        }
+
+        .carrusel-texto h2 {
+            font-size: 70px;
+        }
+
+        #autorFoto {
+
+            padding-top: 0px;
+            height: 120px;
+            max-width: 30%;
+        }
+    }
+
+    /* Extra large devices (large desktops, entre 1200px y 1399.98px) */
+    @media (min-width: 1200px) and (max-width: 1399.98px) {
+        .carrusel img {
+            height: 700px;
+        }
+
+        .Seccion1 {
+            height: 700px;
+        }
+
+        .carrusel-texto h2 {
+            font-size: 85px;
+        }
+
+        #autorFoto {
+
+            padding-top: 0px;
+            height: 120px;
+            max-width: 30%;
+        }
+    }
+
+    /* Extra large devices (large desktops, 1400px and up) */
+    @media (min-width: 1400px) {
+        .carrusel img {
+            height: 1000px;
+        }
+
+        .Seccion1 {
+            height: 1000px;
+        }
+
+        .carrusel-texto h2 {
+            font-size: 120px;
+        }
+
+        #autorFoto {
+
+            padding-top: 0px;
+            height: 120px;
+            max-width: 30%;
+        }
+
+    }

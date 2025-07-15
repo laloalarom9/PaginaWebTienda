@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>La Tienda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!--GOOGLE-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><!--GOOGLE-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&family=Open+Sans:wght@300;600&family=Roboto:wght@300&display=swap"
+        rel="stylesheet"><!--GOOGLE-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--CSS Bootstrap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!--Animate-->
+    <link rel="stylesheet" href="miCss.css">
+</head>
+
+<body class="bodyComprar">
+    <header>
+    </header>
+    <!--Inicio NavBar-->
+    <nav class="navbar navbar-expand-lg navbar-expand-md"><!--Que se expanda el menu cuando sea mediano y grande -->
+        <div class="containerNav container-fluid">
+            <div class="d-flex flex-grow-1">
+                <span class="w-100 d-lg-none d-block">
+                </span>
+                <a class="navbar-brand d-none d-lg-inline-block" href="index.html">
+                    <img class="logo" src="Logo/logoTienda.png" alt="logo">
+                </a>
+                <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="index.html">
+                    <img class="logo" src="Logo/logoTienda.png" alt="logo">
+                </a>
+                <div class="w-100 text-right">
+
+                    <button class="navbar-toggler" id="nav-icon1" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#myNavbar"><!--Esto es lo del icono de hamburguesa-->
+                        <span class="navbar-toggler-icon"></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+                <ul class="navbar-nav ms-auto flex-nowrap">
+                    <li class="nav-item">
+                        <div class="contenedorMenuOpciones">
+
+                            <a href="index.html">
+                                <img class="imagenMenu " src="Imagenes/iconosMenu/hogar.png" alt="Inicio">
+                            </a>
+                            <a href="index.html" class="resaltar nav-link menu-item ">Inicio</a>
+                            <!--active sirve para cuando estas en ese link-->
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="contenedorMenuOpciones">
+                            <a href="conocenos.html">
+                                <img class="imagenMenu" src="Imagenes/iconosMenu/conocenos.png" alt="Conócenos">
+                            </a>
+                            <a href="conocenos.html" class="resaltar nav-link menu-item">Conócenos</a>
+                            <!--active sirve para cuando estas en ese link-->
+                        </div>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <div class="contenedorMenuOpciones">
+                            <a href="compra.html">
+                                <img class="imagenMenu" src="Imagenes/iconosMenu/compra.png" alt="Compra en Línea">
+                            </a>
+                            <a href="compra.html" class="resaltar active nav-link menu-item">Productos</a>
+                            <!--active sirve para cuando estas en ese link-->
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <div class="contenedorMenuOpciones">
+                            <a href="contacto.html">
+                                <img class="imagenMenu" src="Imagenes/iconosMenu/contacto.png" alt="Contacto">
+                            </a>
+                            <a href="contacto.html" class="resaltar nav-link menu-item">Contacto</a>
+                            <!--active sirve para cuando estas en ese link-->
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!--Fin NavBar-->
+    <main>
+        <div class="containerGaleria">
+            <!-- Producto 1 -->
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/polloVillaroy.jpg', 'Producto 1', '2.25€')"><!--Al hacer click se llama a la funcion openModal con 3 parametros, la ruta, elt titulo del producto y el precio-->
+                <img src="Imagenes/imagenesGaleria/polloVillaroy.jpg" alt="Producto 1">
+                <div class="producto-info">
+                    <div class="producto-title">Pechuga Villaroy</div>
+                    <div class="producto-price">2.25€</div>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/filetePescadoEmpanado.webp', 'Producto 2', '4.00€')">
+                <img src="Imagenes/imagenesGaleria/filetePescadoEmpanado.webp" alt="Producto 2">
+                <div class="producto-info">
+                    <div class="producto-title">Filete de Pescado Empanado</div>
+                    <div class="producto-price">4.00€</div>
+                </div>
+            </div>
+            <div class="producto" onclick="openModal('Imagenes/imagenesGaleria/perritos.jpg', 'Producto 3', '4.50€')">
+                <img src="Imagenes/imagenesGaleria/perritos.jpg" alt="Producto 3">
+                <div class="producto-info">
+                    <div class="producto-title">Perrito Caliente</div>
+                    <div class="producto-price">4.50€</div>
+                </div>
+            </div>
+            <div class="producto" onclick="openModal('Imagenes/imagenesGaleria/empanadas.webp', 'Producto 4', '2.25€')">
+                <img src="Imagenes/imagenesGaleria/empanadas.webp" alt="Producto 4">
+                <div class="producto-info">
+                    <div class="producto-title">Empanadas</div>
+                    <div class="producto-price">2.25€</div>
+                </div>
+            </div>
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/spaghetti bolognesa.jpg', 'Producto 5', '4.50€')">
+                <img src="Imagenes/imagenesGaleria/spaghetti bolognesa.jpg" alt="Producto 5">
+                <div class="producto-info">
+                    <div class="producto-title">Spaghetti Bolognesa</div>
+                    <div class="producto-price">4.50€</div>
+                </div>
+            </div>
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/6fideua-de-mariscos.jpg', 'Imagenes/imagenesGaleria/6fideua-de-mariscos.jpg', '5.00€')">
+                <img src="Imagenes/imagenesGaleria/6fideua-de-mariscos.jpg" alt="Producto 6">
+                <div class="producto-info">
+                    <div class="producto-title">Fideua</div>
+                    <div class="producto-price">5.00€</div>
+                </div>
+            </div>
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/7pasta-carbonara.jpg', 'Producto 7', '5.00€')">
+                <img src="Imagenes/imagenesGaleria/7pasta-carbonara.jpg" alt="Producto 7">
+                <div class="producto-info">
+                    <div class="producto-title">Spaghetti Carbonara</div>
+                    <div class="producto-price">5.00€</div>
+                </div>
+            </div>
+            <div class="producto" onclick="openModal('Imagenes/imagenesGaleria/8ibericas.webp', 'Producto 8', '0.80€')">
+                <img src="Imagenes/imagenesGaleria/8ibericas.webp" alt="Producto 8">
+                <div class="producto-info">
+                    <div class="producto-title">Croquetas Ibéricas</div>
+                    <div class="producto-price">0.80€</div>
+                </div>
+            </div>
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/9lasagnaAtun.jpg', 'Producto 9', '5.00€')">
+                <img src="Imagenes/imagenesGaleria/9lasagnaAtun.jpg" alt="Producto 9">
+                <div class="producto-info">
+                    <div class="producto-title">Lasagna Atún</div>
+                    <div class="producto-price">5.00€</div>
+                </div>
+            </div>
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/10lasanaVerduras.jpg', 'Producto 10', '5.00€')">
+                <img src="Imagenes/imagenesGaleria/10lasanaVerduras.jpg" alt="Producto 10">
+                <div class="producto-info">
+                    <div class="producto-title">Lasagna Verduras</div>
+                    <div class="producto-price">5.00€</div>
+                </div>
+            </div>
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/11lasagnaCarne.jpg', 'Producto 11', '5.00€')">
+                <img src="Imagenes/imagenesGaleria/11lasagnaCarne.jpg" alt="Producto 11">
+                <div class="producto-info">
+                    <div class="producto-title">Lasagna Carne</div>
+                    <div class="producto-price">5.00€</div>
+                </div>
+            </div>
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/12hamburguesa.jpg', 'Producto 12', '5.50€')">
+                <img src="Imagenes/imagenesGaleria/12hamburguesa.jpg" alt="Producto 12">
+                <div class="producto-info">
+                    <div class="producto-title">Hamburguesa</div>
+                    <div class="producto-price">5.50€</div>
+                </div>
+            </div>
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/13tortillaEspanola.jpg', 'Producto 13', '12.00€')">
+                <img src="Imagenes/imagenesGaleria/13tortillaEspanola.jpg" alt="Producto 13">
+                <div class="producto-info">
+                    <div class="producto-title">Tortilla de Patatas</div>
+                    <div class="producto-price">12.00€</div>
+                </div>
+            </div>
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/14tortillaChorizo.jpg', 'Producto 14', '14.00€')">
+                <img src="Imagenes/imagenesGaleria/14tortillaChorizo.jpg" alt="Producto 14">
+                <div class="producto-info">
+                    <div class="producto-title">Tortilla de Patatas con Chorizo</div>
+                    <div class="producto-price">14.00€</div>
+                </div>
+            </div>
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/15tortillaBerenjena.jpg', 'Producto 15', '14.00€')">
+                <img src="Imagenes/imagenesGaleria/15tortillaBerenjena.jpg" alt="Producto 15">
+                <div class="producto-info">
+                    <div class="producto-title">Tortilla de Patatas con Berenjena</div>5.00€
+                    <div class="producto-price">14.00€</div>
+                </div>
+            </div>
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/16lentejas.webp', 'Producto 16', '5.00€')">
+                <img src="Imagenes/imagenesGaleria/16lentejas.webp" alt="Producto 16">
+                <div class="producto-info">
+                    <div class="producto-title">Lentejas</div>
+                    <div class="producto-price">5.00€</div>
+                </div>
+            </div>
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/17alubias.webp', 'Producto 17', '5.00€')">
+                <img src="Imagenes/imagenesGaleria/17alubias.webp" alt="Producto 17">
+                <div class="producto-info">
+                    <div class="producto-title">Alubias</div>
+                    <div class="producto-price">5.00€</div>
+                </div>
+            </div>
+
+            <div class="producto" onclick="openModal('Imagenes/imagenesGaleria/18alitas.webp', 'Producto 18', '0.80€')">
+                <img src="Imagenes/imagenesGaleria/18alitas.webp" alt="Producto 18">
+                <div class="producto-info">
+                    <div class="producto-title">Alitas de Pollo</div>
+                    <div class="producto-price">0.80€</div>
+                </div>
+            </div>
+
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/19chuletaAhumado.jpg', 'Producto 19', '5.00€')">
+                <img src="Imagenes/imagenesGaleria/19chuletaAhumado.jpg" alt="Producto 19">
+                <div class="producto-info">
+                    <div class="producto-title">Lomo de Cerdo</div>
+                    <div class="producto-price">5.00€</div>
+                </div>
+            </div>
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/20chuletasCerdo.jpg', 'Producto 20', '5.00€')">
+                <img src="Imagenes/imagenesGaleria/20chuletasCerdo.jpg" alt="Producto 20">
+                <div class="producto-info">
+                    <div class="producto-title">Lomo de Cerdo a la Manzana</div>
+                    <div class="producto-price">5.00€</div>
+                </div>
+            </div>
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/21polloChampinones.jpg', 'Producto 21', '5.00€')">
+                <img src="Imagenes/imagenesGaleria/21polloChampinones.jpg" alt="Producto 21">
+                <div class="producto-info">
+                    <div class="producto-title">Pollo con champiñones</div>
+                    <div class="producto-price">5.00€</div>
+                </div>
+            </div>
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/22pizzaPepperoni.webp', 'Producto 22', '2.00€')">
+                <img src="Imagenes/imagenesGaleria/22pizzaPepperoni.webp" alt="Producto 22">
+                <div class="producto-info">
+                    <div class="producto-title">Pizza de Pepperoni</div>
+                    <div class="producto-price">2.00€</div>
+                </div>
+            </div>
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/23pizzapollo.webp', 'Producto 23', '2.00€')">
+                <img src="Imagenes/imagenesGaleria/23pizzapollo.webp" alt="Producto 23">
+                <div class="producto-info">
+                    <div class="producto-title">Pizza de Pollo</div>
+                    <div class="producto-price">2.00€</div>
+                    <div class="producto-price"></div>
+                </div>
+            </div>
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/24panini.jpg', 'Producto 24', '4.00€')">
+                <img src="Imagenes/imagenesGaleria/24panini.jpg" alt="Producto 24">
+                <div class="producto-info">
+                    <div class="producto-title">Panini</div>
+                    <div class="producto-price">4.00€</div>
+                </div>
+            </div>
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/25alambrePollo.jpg', 'Producto 25', '5.00€')">
+                <img src="Imagenes/imagenesGaleria/25alambrePollo.jpg" alt="Producto 25">
+                <div class="producto-info">
+                    <div class="producto-title">Alambre de Pollo</div>
+                    <div class="producto-price">5.00€</div>
+                </div>
+            </div>
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/26alambrecarne.jpg', 'Producto 26', '5.00€')">
+                <img src="Imagenes/imagenesGaleria/26alambrecarne.jpg" alt="Producto 26">
+                <div class="producto-info">
+                    <div class="producto-title">Alambre de Carne</div>
+                    <div class="producto-price">5.00€</div>
+                </div>
+            </div>
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/27macarronesTomate.jpg', 'Producto 27', '5.00€')">
+                <img src="Imagenes/imagenesGaleria/27macarronesTomate.jpg" alt="Producto 27">
+                <div class="producto-info">
+                    <div class="producto-title">Macarrones</div>
+                    <div class="producto-price">5.00€</div>
+                </div>
+            </div>
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/28EnsaladaAtunMayonesa.jpeg', 'Producto 28', '5.00€')">
+                <img src="Imagenes/imagenesGaleria/28EnsaladaAtunMayonesa.jpeg" alt="Producto 28">
+                <div class="producto-info">
+                    <div class="producto-title">Ensalada de Atún</div>
+                    <div class="producto-price">5.00€</div>
+                </div>
+            </div>
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/29macarronesAtun.jpg', 'Producto 29', '5.00€')">
+                <img src="Imagenes/imagenesGaleria/29macarronesAtun.jpg" alt="Producto 29">
+                <div class="producto-info">
+                    <div class="producto-title">Macarrones con Atún</div>
+                    <div class="producto-price">5.00€</div>
+                </div>
+            </div>
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/30paella-mixta.jpg', 'Producto 30', '5.50€')">
+                <img src="Imagenes/imagenesGaleria/30paella-mixta.jpg" alt="Producto 30">
+                <div class="producto-info">
+                    <div class="producto-title">Paella Mixta</div>
+                    <div class="producto-price">5.50€</div>
+                </div>
+            </div>
+            <div class="producto" onclick="openModal('Imagenes/imagenesGaleria/31Bocata.jpg', 'Producto 31', '3.50€')">
+                <img src="Imagenes/imagenesGaleria/31Bocata.jpg" alt="Producto 31">
+                <div class="producto-info">
+                    <div class="producto-title">Bocata</div>
+                    <div class="producto-price">3.50€</div>
+                </div>
+            </div>
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/32espghettiChino.jpg', 'Producto 32', '5.00€')">
+                <img src="Imagenes/imagenesGaleria/32espghettiChino.jpg" alt="Producto 32">
+                <div class="producto-info">
+                    <div class="producto-title">Spaghetti estilo Chino</div>
+                    <div class="producto-price">5.00€</div>
+                </div>
+            </div>
+            <div class="producto"
+                onclick="openModal('Imagenes/imagenesGaleria/33arrozCubana.jpg', 'Producto 33', '5.00€')">
+                <img src="Imagenes/imagenesGaleria/33arrozCubana.jpg" alt="Producto 33">
+                <div class="producto-info">
+                    <div class="producto-title">Arroz a la Cubana</div>
+                    <div class="producto-price">5.00€</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="miModal" class="modal" onclick="closeModal()"><!--llama a la función closeModal cuando se hace clic en el modal.-->
+            <div class="modal-contenido">
+                <span class="cerrar">&times;</span><!--Boton de cerrar &times es la x-->
+                <img id="modalImagen" src="" alt="Producto en detalle">
+            </div>
+        </div>
+
+
+
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Contacto</h3>
+                    <p>Email: latienda@gmail.com</p>
+                    <p>Teléfono: 604 28 06 63</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="conocenos.html">Conócenos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="compra.html">Compra en Línea</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Síguenos</h3>
+                    <p>Síguenos en nuestras redes sociales para recibir las últimas actualizaciones:</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/" target="_blank"><img
+                                src="Imagenes/IconocFooter/facebook.png" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/" target="_blank"><img
+                                src="Imagenes/IconocFooter/instagram.png" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <!--Para que funcione el boton del nav animado-->
+    <script src="documentosjs.js"></script><!--Mi script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

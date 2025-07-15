@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>La Tienda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!--GOOGLE-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><!--GOOGLE-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&family=Open+Sans:wght@300;600&family=Roboto:wght@300&display=swap"
+        rel="stylesheet"><!--GOOGLE-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--CSS Bootstrap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!--Animate-->
+    <link rel="stylesheet" href="miCss.css">
+</head>
+
+<body class="bodyConocenos">
+    <header>
+    </header>
+    <!--Inicio navbar-->
+    <nav class="navbar navbar-expand-lg navbar-expand-md"><!--Que se expanda el menu cuando sea mediano y grande -->
+        <div class="containerNav container-fluid">
+            <div class="d-flex flex-grow-1">
+                <span class="w-100 d-lg-none d-block">
+                </span>
+                <a class="navbar-brand d-none d-lg-inline-block" href="index.html">
+                    <img class="logo" src="Logo/logoTienda.png" alt="logo">
+                </a>
+                <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="index.html">
+                    <img class="logo" src="Logo/logoTienda.png" alt="logo">
+                </a>
+                <div class="w-100 text-right">
+
+                    <button class="navbar-toggler" id="nav-icon1" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#myNavbar"><!--Esto es lo del icono de haburguesa-->
+                        <span class="navbar-toggler-icon"></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+                <ul class="navbar-nav ms-auto flex-nowrap">
+                    <li class="nav-item">
+                        <div class="contenedorMenuOpciones">
+
+                            <a href="index.html">
+                                <img class="imagenMenu " src="Imagenes/iconosMenu/hogar.png" alt="Inicio">
+                            </a>
+                            <a href="index.html" class="resaltar nav-link menu-item ">Inicio</a>
+                            <!--active sirve para cuando estas en ese link-->
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="contenedorMenuOpciones">
+                            <a href="conocenos.html">
+                                <img class="imagenMenu" src="Imagenes/iconosMenu/conocenos.png" alt="Conócenos">
+                            </a>
+                            <a href="conocenos.html" class="resaltar active nav-link menu-item">Conócenos</a>
+                            <!--active sirve para cuando estas en ese link-->
+                        </div>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <div class="contenedorMenuOpciones">
+                            <a href="compra.html">
+                                <img class="imagenMenu" src="Imagenes/iconosMenu/compra.png" alt="Compra en Línea">
+                            </a>
+                            <a href="compra.html" class="resaltar nav-link menu-item">Productos</a>
+                            <!--active sirve para cuando estas en ese link-->
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <div class="contenedorMenuOpciones">
+                            <a href="contacto.html">
+                                <img class="imagenMenu" src="Imagenes/iconosMenu/contacto.png" alt="Contacto">
+                            </a>
+                            <a href="contacto.html" class="resaltar nav-link menu-item">Contacto</a>
+                            <!--active sirve para cuando estas en ese link-->
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Fin navbar-->
+    <main>
+
+        <!-- Banner en la parte inferior -->
+        <div class="fixed-bottom bg-light p-2 text-center" id="bannerContainer">
+            <!--fixed-bottom: Fija el elemento en la parte inferior de la pantalla.
+            bg-light: Da un fondo clarito al banner.
+            p-2: Añade un padding de 2 a los lados del banner.
+            text-center: Centra el texto del banner.
+            -->
+            ¡Jueves de Hamburguesas!
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#bannerModal"
+                onclick="ocultarBanner()">
+                <!-- type="button":Especifica que es un botón y no un botón de envío en un formulario.
+                data-toggle="modal": Especifica que el botón abrirá un modal.
+                data-target="#bannerModal": Especifica el modal que se abrirá al hacer click en el botón.
+                onclick="ocultarBanner()": Especifica que se ejecutará la función ocultarBanner() al hacer click en el botón.
+                onclick="ocultarBanner()": Oculta el banner al hacer click
+                Aplica estilos de Bootstrap para un botón rojo
+                -->
+                &#10006; <!-- Símbolo "X" -->
+            </button>
+        </div>
+
+        <div class id="contenedorConocenos">
+            <!-- Grupo 1 -->
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <img src="Imagenes/imagenesConocenos/comidaCasera.jpg" alt="Conócenos 1" class="img-fluid"><!--img-fluid:la imagen sea totalmente fluida y se adapte al tamaño del contenedor padre-->
+                </div>
+                <div class="col-sm-12 col-md-6"><!--Columnas en tamaño mediano y chico-->
+                    <h2>¿Quiénes somos?</h2>
+                    <p>Somos una empresa familiar dedicada principalmente a la venta de comida preparada. Nuestro
+                        objetivo es ofrecer productos de calidad a precios accesibles.
+                        Además Contamos con una amplia variedad de productos, desde frutas y verduras hasta
+                        Bolleria. También ofrecemos una amplia variedad de bebidas, entre otros.</p>
+                </div>
+            </div>
+
+            <!-- Grupo 2 -->
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h2>¿Por qué elegirnos?</h2>
+                    <p>
+                        Somos un venerable establecimiento con una rica tradición de más de 40 años, destacándonos por
+                        ofrecer una experiencia gastronómica única en cada uno de nuestros menús.
+                        En nuestro extenso repertorio de productos, encontrarás una amplia variedad que satisface todos
+                        los gustos y preferencias.
+                    </p>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <img src="Imagenes/imagenesConocenos/frutasyVerduras.jpg" alt="Conócenos 2" class="img-fluid">
+                </div>
+            </div>
+
+            <!-- Grupo 3 -->
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <img src="Imagenes/imagenesConocenos/cafeteria.jpg" alt="Conócenos 3" class="img-fluid">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <h2>Por la Mañana</h2>
+                    <p>Cada mañana, te invitamos a sumergirte en el aroma tentador de nuestro café recién hecho y a
+                        deleitar tu paladar con nuestro exquisito pan fresco.
+                        ¡Únete a nosotros cada mañana para disfrutar de la mezcla perfecta de calidad, frescura y buen
+                        gusto! Tu día merece un comienzo excepcional, y nosotros estamos aquí para hacerlo posible.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Grupo 4 -->
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h2>Por la tarde</h2>
+                    <p>¡Haz de tus tardes un deleite culinario con nuestros irresistibles menús de comida!
+                        Disponemos de platos frescos y deliciosos para todos los gustos.
+                        Además, nuestro servicio es rápido y eficiente, para que puedas disfrutar de una deliciosa
+                        comida sin perder tiempo valioso. Ya sea que busques una comida rápida y reconfortante o una
+                        experiencia más completa.
+                    </p>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <img src="Imagenes/imagenesConocenos/menu.webp" alt="Conócenos 4"
+                        class="img-fluid">
+                </div>
+            </div>
+
+            <!-- Grupo 5 -->
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <img src="Imagenes/imagenesConocenos/cerveza.jpeg" alt="Conócenos 1" class="img-fluid">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <h2>Por la noche</h2>
+                    <p>¡Transforma tus noches en una experiencia única con nuestra selección premium de cervezas y
+                        deliciosos platillos!Descubre el placer de disfrutar una cerveza fría y de alta calidad junto
+                        con nuestra irresistible oferta nocturna. Desde cervezas artesanales hasta opciones
+                        internacionales, te invitamos a explorar un mundo de sabores en cada sorbo. </p>
+
+                </div>
+
+
+            </div>
+
+            <div class="containerVideoTodo"><!--Contiene tambien el h2-->
+                <h2>¡Mira nuestro video de uno de nuestros platillos!</h2>
+                <div class="video-container">
+                    <div class="col-md-12"><!--Como se adapta en resolucion mediana-->
+                        <video id="video" width="560" height="315" controls><!--controls es para que el usuario lo reproduzca manualmente-->
+                            <source src="Video/TortillaPatatass.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Contacto</h3>
+                    <p>Email: latienda@gmail.com</p>
+                    <p>Teléfono: 604 28 06 63</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="conocenos.html">Conócenos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="compra.html">Compra en Línea</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Síguenos</h3>
+                    <p>Síguenos en nuestras redes sociales para recibir las últimas actualizaciones:</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/" target="_blank"><img
+                                src="Imagenes/IconocFooter/facebook.png" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/" target="_blank"><img
+                                src="Imagenes/IconocFooter/instagram.png" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <!--Para que funcione el boton del nav animado-->
+    <script src="documentosjs.js"></script><!--Mi script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+
+</body>
+
+</html>
